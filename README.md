@@ -28,13 +28,13 @@ server will start on localhost:8000<br>
 
 ## Question 2: Create a REST API in Laravel which will read 20K records at a time from MySQL or MongoDB database & return them as JSON. API RTT(Round trip time) should be as
 minimum as possible
-            - There are two api first is without cache and second is with cache
-            - First Api http://127.0.0.1:8000/api/get-todo-list
-            - Second Api http://127.0.0.1:8000/api/get-todo
-            - File Path: app/Http/Controllers/Api/TodoController
-            - Method name: 1. todoWithCache 2. todoWithoutCache
+            - There are two api first is without cache and second is with cache<br>
+            - First Api http://127.0.0.1:8000/api/get-todo-list<br>
+            - Second Api http://127.0.0.1:8000/api/get-todo<br>
+            - File Path: app/Http/Controllers/Api/TodoController<br>
+            - Method name: 1. todoWithCache 2. todoWithoutCache<br>
           
-# Question 3: Prepare SQL query such that there is a user table with column "grades". You have to find out the user records from users table where users have got grades in this pattern (1,3) or (1,3,2) etc
+## Question 3: Prepare SQL query such that there is a user table with column "grades". You have to find out the user records from users table where users have got grades in this pattern (1,3) or (1,3,2) etc
             - Api http://127.0.0.1:8000/api/get-user
             - File Path: app/Http/Controllers/Api/UserController
             - Method name: getUser
