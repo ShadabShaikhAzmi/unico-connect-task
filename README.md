@@ -7,56 +7,34 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Project Installation
+step 1: clone the project
+step 2: setup database there is a file inside project folder laravel.sql import on your database or create a database laravel and configure .env file with database credentails and run the migrations plus seed command it wll create the table with fake data.
+step 3: run command "php artisan serve" 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+server will start on localhost:8000
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+# Question 1: Add a cron job schedular and schedular should take backup of mysql database and upload it on the google drive
+            - Schedular is added in app/Console/Kernal.php  (schedular name- backup:run)
+            - Schedular will run on every night at 01:01.
+            - On local machine we can run schedular by running following command (php artisan backup:run).
+            - But on live server we can create a cron and i will run the schedular automatically at midnight.
+            - * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1 we can create the cron like this on server.
+            - Mysql database backup also done you can check by running the command "php artisan backup:run"
+            - google drive folder link you can check here: <a href="https://drive.google.com/drive/folders/1hcA8vHelQHlKAoLGAkHQscERpk18onhg?usp=sharing">Google Drive Folder</a>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Question 2: Create a REST API in Laravel which will read 20K records at a time from MySQL or MongoDB database & return them as JSON. API RTT(Round trip time) should be as
+minimum as possible.
+            - There are two api first is without cache and second is with cache
+            - First Api http://127.0.0.1:8000/api/get-todo-list
+            - Second Api http://127.0.0.1:8000/api/get-todo
+            - File Path: app/Http/Controllers/Api/TodoController
+            - Method name: 1. todoWithCache 2. todoWithoutCache
+          
+# Question 3: Prepare SQL query such that there is a user table with column "grades". You have to find out the user records from users table where users have got grades in this pattern (1,3) or (1,3,2) etc. 
+            - Api http://127.0.0.1:8000/api/get-user
+            - File Path: app/Http/Controllers/Api/UserController
+            - Method name: getUser
