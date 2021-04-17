@@ -24,17 +24,17 @@ server will start on localhost:8000<br>
             - But on live server we can create a cron and i will run the schedular automatically at midnight.
             - * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1 we can create the cron like this on server.
             - Mysql database backup also done you can check by running the command "php artisan backup:run"
-            - google drive folder link you can check here: <a href="https://drive.google.com/drive/folders/1hcA8vHelQHlKAoLGAkHQscERpk18onhg?usp=sharing">Google Drive Folder</a>
+            - google drive folder link you can check here: https://drive.google.com/drive/folders/1hcA8vHelQHlKAoLGAkHQscERpk18onhg?usp=sharing
 
-# Question 2: Create a REST API in Laravel which will read 20K records at a time from MySQL or MongoDB database & return them as JSON. API RTT(Round trip time) should be as
-minimum as possible.
+## Question 2: Create a REST API in Laravel which will read 20K records at a time from MySQL or MongoDB database & return them as JSON. API RTT(Round trip time) should be as
+minimum as possible
             - There are two api first is without cache and second is with cache
             - First Api http://127.0.0.1:8000/api/get-todo-list
             - Second Api http://127.0.0.1:8000/api/get-todo
             - File Path: app/Http/Controllers/Api/TodoController
             - Method name: 1. todoWithCache 2. todoWithoutCache
           
-# Question 3: Prepare SQL query such that there is a user table with column "grades". You have to find out the user records from users table where users have got grades in this pattern (1,3) or (1,3,2) etc. 
+# Question 3: Prepare SQL query such that there is a user table with column "grades". You have to find out the user records from users table where users have got grades in this pattern (1,3) or (1,3,2) etc
             - Api http://127.0.0.1:8000/api/get-user
             - File Path: app/Http/Controllers/Api/UserController
             - Method name: getUser
