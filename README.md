@@ -11,7 +11,7 @@
 
 ## Project Installation <br>
 step 1: clone the project <br>
-step 2: run command "composer install" and "npm install"
+step 2: run command "composer install" and "npm install"<br>
 step 3: setup database there is a file inside project folder laravel.sql import on your database or create a database laravel and configure .env file with database credentails and run the migrations plus seed command it wll create the table with fake data<br>
 step 4: run command "php artisan serve" <br>
 
